@@ -49,7 +49,7 @@ export const getBills = async (_: Request, res: Response) => {
 };
 
 export const getBillByEmail = async (req: Request, res: Response) => {
-  const { email } = req.body;
+  const { email } = req.params;
   if (!email) {
     return res.json({ msg: "No ha ingresado ningún email" });
   }

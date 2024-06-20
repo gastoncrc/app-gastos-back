@@ -40,6 +40,7 @@ const express_1 = __importStar(require("express"));
 const config_1 = require("../database/config");
 const bills_routes_1 = __importDefault(require("../routes/bills-routes"));
 const users_routes_1 = __importDefault(require("../routes/users-routes"));
+const cors_1 = __importDefault(require("cors"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -55,6 +56,9 @@ class Server {
     }
     middlewares() {
         this.app.use((0, express_1.json)());
+        this.app.use((0, cors_1.default)({
+            origin: "http://localhost:5173",
+        }));
     }
     routes() {
         this.app.use("/bills", bills_routes_1.default);

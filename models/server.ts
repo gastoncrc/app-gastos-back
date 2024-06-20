@@ -2,6 +2,7 @@ import express, { Express, json } from "express";
 import { dbConnection } from "../database/config";
 import routesBills from "../routes/bills-routes";
 import routesUsers from "../routes/users-routes";
+import cors from "cors";
 
 export class Server {
   app: Express;
@@ -21,6 +22,11 @@ export class Server {
 
   middlewares() {
     this.app.use(json());
+    this.app.use(
+      cors({
+        origin: "http://localhost:5173",
+      })
+    );
   }
 
   routes() {

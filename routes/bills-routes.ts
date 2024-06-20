@@ -14,6 +14,8 @@ router.get("/get-bill-by-name", getBillByName);
 
 router.get("/get-bills", getBills);
 
-router.get("/get-bill-by-user", getBillByEmail);
+router.get("/get-bill-by-email/:email", getBillByEmail);
 
 export default router;
+
+// ferperezvl@gmail.com

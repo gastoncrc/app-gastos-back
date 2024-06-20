@@ -6,5 +6,6 @@ const router = (0, express_1.Router)();
 router.post("/", bills_controllers_1.createBill);
 router.get("/get-bill-by-name", bills_controllers_1.getBillByName);
 router.get("/get-bills", bills_controllers_1.getBills);
-router.get("/get-bill-by-user", bills_controllers_1.getBillByEmail);
+router.get("/get-bill-by-email/:email", bills_controllers_1.getBillByEmail);
 exports.default = router;
+// ferperezvl@gmail.com

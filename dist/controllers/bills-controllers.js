@@ -65,7 +65,7 @@ const getBills = (_, res) => __awaiter(void 0, void 0, void 0, function* () {
 });
 exports.getBills = getBills;
 const getBillByEmail = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { email } = req.body;
+    const { email } = req.params;
     if (!email) {
         return res.json({ msg: "No ha ingresado ningún email" });
     }
